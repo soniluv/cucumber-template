@@ -54,7 +54,7 @@ public class BrowserFactory {
         else {
             if (RunCukesTest.browser.equalsIgnoreCase("chrome")) {
                 WebDriverManager.chromedriver().setup();
-                /*DesiredCapabilities caps = DesiredCapabilities.firefox();
+                DesiredCapabilities caps = DesiredCapabilities.firefox();
                 caps.setCapability("platform", "Windows 8");
                 caps.setCapability("version", "43.0");
                 try {
@@ -62,7 +62,7 @@ public class BrowserFactory {
                     return  driver;
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
-                } */
+                } 
                 return new ChromeDriver();
             } else if (RunCukesTest.browser.equalsIgnoreCase("firefox")) {
                 WebDriverManager.firefoxdriver().setup();
